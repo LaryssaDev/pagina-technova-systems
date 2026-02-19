@@ -1,0 +1,7 @@
+{
+  "name": "TechNova Systems Institutional",
+  "description": "A high-end, modern institutional website for TechNova Systems, featuring a sleek dark theme, responsive portfolio, and strategic CTA sections.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
