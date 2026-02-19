@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, MessageCircle, MapPin, ChevronRight } from 'lucide-react';
+import { Menu, X, Instagram, MessageCircle, MapPin, ChevronRight, ExternalLink } from 'lucide-react';
 import { PROJECTS, DIFFERENTIALS, WHATSAPP_URL, INSTAGRAM_URL } from './constants';
 
 const LOGO_URL = "https://i.imgur.com/t25sUy1.jpeg";
@@ -119,7 +118,7 @@ const App: React.FC = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      <section id="inicio" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="absolute top-0 right-0 -z-10 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-blue-500/10 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2" />
         
@@ -161,11 +160,6 @@ const App: React.FC = () => {
                   alt="Website Showcase" 
                   className="rounded-lg shadow-2xl opacity-90 group-hover:opacity-100 transition-opacity"
                 />
-                <div className="absolute -bottom-6 -right-6 hidden md:block w-48 h-48 bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-2xl animate-pulse">
-                  <div className="w-full h-4 bg-slate-700 rounded mb-4" />
-                  <div className="w-2/3 h-4 bg-slate-700 rounded mb-8" />
-                  <div className="w-full h-12 bg-blue-600/40 rounded-lg" />
-                </div>
               </div>
             </div>
           </div>
@@ -202,34 +196,47 @@ const App: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PROJECTS.map((project) => (
-              <div key={project.id} className="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/50">
-                <div className="aspect-[4/3] overflow-hidden">
+              <div 
+                key={project.id} 
+                className="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/50 cursor-pointer"
+              >
+                {/* Overlay Link - Torna o card inteiro clicável */}
+                <a 
+                  href={project.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="absolute inset-0 z-20"
+                  aria-label={`Visualizar site de ${project.name}`}
+                ></a>
+
+                <div className="aspect-[4/3] overflow-hidden relative">
                   <img 
                     src={project.image} 
                     alt={project.name} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60" />
+                  
+                  {/* Ícone flutuante de Link */}
+                  <div className="absolute top-4 right-4 p-3 bg-blue-600 rounded-full text-white opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-10 shadow-lg">
+                    <ExternalLink size={20} />
+                  </div>
                 </div>
-                <div className="p-8">
+
+                <div className="p-8 relative z-10">
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <span className="text-xs font-bold text-blue-500 uppercase tracking-widest">{project.category}</span>
-                      <h3 className="text-2xl font-bold mt-1">{project.name}</h3>
+                      <h3 className="text-2xl font-bold mt-1 group-hover:text-blue-400 transition-colors">{project.name}</h3>
                     </div>
                   </div>
                   <p className="text-slate-400 mb-6 line-clamp-2">
                     {project.description}
                   </p>
-                  <a 
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-white font-bold group/btn"
-                  >
+                  <div className="inline-flex items-center gap-2 text-white font-bold group-hover:text-blue-500 transition-colors">
                     Clique aqui para visualizar o site
-                    <ChevronRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
-                  </a>
+                    <ChevronRight size={18} className="transition-transform group-hover:translate-x-2" />
+                  </div>
                 </div>
               </div>
             ))}
