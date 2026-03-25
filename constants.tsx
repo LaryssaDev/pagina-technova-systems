@@ -3,7 +3,7 @@ import React from 'react';
 import { Layout, Zap, Target, Users, Headset } from 'lucide-react';
 import { Project, Differential } from './types';
 
-export const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=11944702197&text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento.&type=phone_number&app_absent=0&utm_source=ig";
+export const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=11948626304&text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento.&type=phone_number&app_absent=0&utm_source=ig";
 export const INSTAGRAM_URL = "https://www.instagram.com/tech.novasystems/";
 
 export const PROJECTS: Project[] = [
