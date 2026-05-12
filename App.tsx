@@ -405,7 +405,7 @@ const App: React.FC = () => {
                 <div className="p-10">
                   <span className="text-xs font-black text-blue-500 uppercase tracking-[0.2em] mb-3 block">{project.category}</span>
                   <h3 className="text-2xl font-black mb-4 group-hover:text-blue-400 transition-colors">{project.name}</h3>
-                  <p className="text-slate-400 mb-8 line-clamp-2 leading-relaxed">{project.description}</p>
+                  <p className="text-slate-400 mb-8 line-clamp-3 leading-relaxed">{project.description}</p>
                   <div className="flex items-center gap-2 text-white font-black group-hover:text-blue-500 transition-all">
                     VER PROJETO COMPLETO
                     <ChevronRight size={20} className="transition-transform group-hover:translate-x-2" />
@@ -456,17 +456,17 @@ const App: React.FC = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-blue-600 -z-10 opacity-5" />
         <div className="container mx-auto px-4 md:px-8">
           <motion.div 
             whileInView={{ scale: [0.95, 1] }}
-            className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl shadow-blue-500/20"
+            className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl shadow-blue-500/20 max-w-5xl mx-auto"
           >
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-7xl font-black mb-8 leading-tight">Pronto para dominar o <br className="hidden md:block" /> seu mercado digital?</h2>
-              <p className="text-blue-100 text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-medium">
+              <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">Pronto para dominar o <br className="hidden md:block" /> seu mercado digital?</h2>
+              <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
                 Não deixe seu concorrente levar seus clientes. Garanta sua vaga para este mês.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -474,16 +474,16 @@ const App: React.FC = () => {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-12 py-6 bg-white text-blue-600 rounded-2xl font-black text-2xl flex items-center justify-center gap-3 transition-all hover:scale-105 hover:shadow-2xl"
+                  className="w-full sm:w-auto px-10 py-5 bg-white text-blue-600 rounded-2xl font-black text-xl flex items-center justify-center gap-3 transition-all hover:scale-105 hover:shadow-2xl"
                 >
                   QUERO MEU ORÇAMENTO
-                  <MessageCircle size={28} />
+                  <MessageCircle size={24} />
                 </a>
               </div>
-              <div className="mt-12 flex flex-wrap justify-center gap-8 text-blue-100/80 font-bold uppercase tracking-widest text-sm">
-                <div className="flex items-center gap-2"><ShieldCheck size={20} /> Garantia de Satisfação</div>
-                <div className="flex items-center gap-2"><Clock size={20} /> Entrega Ágil</div>
-                <div className="flex items-center gap-2"><CheckCircle2 size={20} /> Suporte VIP</div>
+              <div className="mt-10 flex flex-wrap justify-center gap-6 text-blue-100/80 font-bold uppercase tracking-widest text-xs">
+                <div className="flex items-center gap-2"><ShieldCheck size={18} /> Garantia de Satisfação</div>
+                <div className="flex items-center gap-2"><Clock size={18} /> Entrega Ágil</div>
+                <div className="flex items-center gap-2"><CheckCircle2 size={18} /> Suporte VIP</div>
               </div>
             </div>
           </motion.div>

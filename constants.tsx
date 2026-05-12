@@ -25,11 +25,11 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
-    name: "Roberto – MKT Digital",
-    category: "Nicho Emagrecimento",
-    description: "Página de vendas estratégica com foco total em conversão para produtos de emagrecimento.",
-    url: "https://emagrecimento-2026-drkn.vercel.app/",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800"
+    name: "TERRAPLANAGEM PLAN",
+    category: "Engenharia",
+    description: "Site Institucional elegante e moderno, estratégico com informações da empresa.",
+    url: "https://www.terraplanagemplan.com/",
+    image: "https://i.imgur.com/ylFs2SK.png"
   },
   {
     id: 4,
@@ -46,6 +46,18 @@ export const PROJECTS: Project[] = [
     description: "Site institucional dinâmico para barbearia com sistema de visualização de serviços e estilo.",
     url: "https://marconi-1jce.vercel.app/",
     image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: 6,
+    name: "Torcida Prime",
+    category: "E-commerce",
+    description: (
+      <>
+        E-commerce moderno para vendas de camisas de time e <span className="text-blue-400 font-bold">integração de API de pagamento MercadoPago</span>
+      </>
+    ),
+    url: "https://torcidaprime.vercel.app/",
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=800"
   }
 ];
 
