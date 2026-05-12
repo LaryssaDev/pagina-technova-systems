@@ -56,3 +56,64 @@ export const DIFFERENTIALS: Differential[] = [
   { id: 4, title: "Atendimento personalizado", icon: <Users className="w-8 h-8 text-blue-500" /> },
   { id: 5, title: "Suporte contínuo", icon: <Headset className="w-8 h-8 text-blue-500" /> },
 ];
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Dra. Elaynne Cristina",
+    role: "Odontologia",
+    content: "A TechNova transformou minha presença digital. Minha agenda nunca esteve tão cheia depois que lançamos a nova landing page.",
+    image: "https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=200"
+  },
+  {
+    id: 2,
+    name: "Roberto Silva",
+    role: "Marketing Digital",
+    content: "O foco em conversão deles é surreal. O ROI dos meus anúncios dobrou com a estrutura que eles montaram.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200"
+  },
+  {
+    id: 3,
+    name: "Lucas Marconi",
+    role: "Empresário",
+    content: "Design impecável e suporte que realmente resolve. Recomendo para qualquer empresa que queira ser levada a sério.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200"
+  }
+];
+
+export const FAQS = [
+  {
+    question: "Quanto tempo leva para o site ficar pronto?",
+    answer: "O prazo médio é de 10 a 20 dias úteis, dependendo da complexidade do projeto e da agilidade no envio dos materiais."
+  },
+  {
+    question: "O site será otimizado para o Google (SEO)?",
+    answer: "Sim! Todos os nossos sites são construídos com as melhores práticas de SEO técnico para ajudar seu negócio a aparecer nas buscas."
+  },
+  {
+    question: "Eu mesmo poderei alterar o conteúdo depois?",
+    answer: "Sim, entregamos o site com um painel administrativo intuitivo ou treinamos você para fazer edições básicas de texto e imagens."
+  },
+  {
+    question: "O site funciona bem no celular?",
+    answer: "Com certeza. Utilizamos a abordagem 'Mobile-First', garantindo que a experiência seja perfeita em qualquer tamanho de tela."
+  }
+];
+
+export const PROCESS_STEPS = [
+  {
+    id: "01",
+    title: "Estratégia",
+    description: "Analisamos seu mercado e público para criar uma estrutura que converte."
+  },
+  {
+    id: "02",
+    title: "Design & Dev",
+    description: "Criamos um visual exclusivo e codificamos com foco em performance."
+  },
+  {
+    id: "03",
+    title: "Lançamento",
+    description: "Configuramos tudo, testamos e colocamos sua máquina de vendas no ar."
+  }
+];
